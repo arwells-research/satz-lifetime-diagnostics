@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: >-
+  If you use this repository, please cite it. This is an open scholarly
+  release; reuse and extension are permitted with attribution.
+
+title: "Satz Lifetime Diagnostics — Universal β-Decay Hazard Law"
+type: software
+license: MIT
+authors:
+  - family-names: Wells
+    given-names: "A. R."
+    affiliation: "Dual-Frame Research Group"
+
+repository-code: "https://github.com/arwells-research/satz-lifetime-diagnostics"
+
+keywords:
+  - beta decay
+  - nuclear lifetimes
+  - decay systematics
+  - logft
+  - ENSDF
+  - NuDat
+  - hazard model
+  - phase space
+  - fission products
+  - Dual-Frame Theory
+
+# Fill these once you cut a tagged release / Zenodo archive:
+# version: "v0.1.0"
+# date-released: "2025-12-22"
+# doi: "10.5281/zenodo.xxxxxxx"

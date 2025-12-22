@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local outputs (do not commit)
+outputs/
+reports/figures/*.png
+reports/figures/*.pdf
+reports/figures/*.svg
+
+# Derived tables / scratch
+data/derived/
+data/tmp/
+*.bak
+*.swp
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Logs
+*.log

@@ -1,0 +1,5 @@
+{
+  "law": "log10(tau) = alpha + delta*logft - log10(G_phase)",
+  "alpha": 1.25,
+  "delta": 0.85
+}

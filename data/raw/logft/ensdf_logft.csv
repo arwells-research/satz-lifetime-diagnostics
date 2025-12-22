@@ -1,0 +1,43 @@
+Z,A,logft,mode,br_pct,source,comment
+20,45,6.01,beta-,100,ENSDF,7/2- to 3/2- allowed
+20,47,5.19,beta-,83.1,ENSDF,7/2- to 5/2- allowed
+20,49,5.0,beta-,88,ENSDF,3/2- to 1/2- allowed
+28,63,6.7,beta-,100,ENSDF,1/2- to 3/2- forbidden
+28,65,4.7,beta-,62.8,ENSDF,5/2- to 7/2- allowed
+28,66,4.3,beta-,100,ENSDF,0+ to 1+ allowed
+29,66,5.1,beta-,100,ENSDF,9/2+ to 7/2- allowed
+29,67,5.0,beta-,100,ENSDF,3/2- to 5/2- allowed
+29,68,5.0,beta-,100,ENSDF,1+ to 0+ allowed
+29,69,4.9,beta-,100,ENSDF,3/2- to 1/2- allowed
+29,70,5.0,beta-,100,ENSDF,1+ to 0+ allowed
+30,69,5.2,beta-,100,ENSDF,1/2- to 3/2- allowed
+30,71,5.1,beta-,100,ENSDF,1/2- to 1/2- allowed
+30,72,4.8,beta-,100,ENSDF,0+ to 1+ allowed
+30,73,5.1,beta-,100,ENSDF,1/2- to 3/2- allowed
+30,75,4.7,beta-,100,ENSDF,7/2+ to 7/2- allowed
+37,82,4.6,EC,100,ENSDF,1+ to 0+ allowed (to GS)
+37,84,5.1,beta-,24.4,ENSDF,2- to 2+ first-forbidden
+37,86,5.5,beta-,91.2,ENSDF,2- to 2+ first-forbidden
+48,115,5.4,beta-,95.4,ENSDF,1/2+ to 1/2- first-forbidden
+48,117,5.5,beta-,69,ENSDF,1/2+ to 3/2- first-forbidden
+48,119,5.4,beta-,40,ENSDF,1/2+ to 3/2- first-forbidden
+50,121,5.2,beta-,100,ENSDF,3/2+ to 3/2+ allowed
+50,123,5.4,beta-,100,ENSDF,11/2- to 11/2- allowed
+50,125,5.1,beta-,100,ENSDF,11/2- to 11/2- allowed
+52,127,5.5,beta-,100,ENSDF,3/2+ to 3/2- first-forbidden
+52,129,5.4,beta-,100,ENSDF,3/2+ to 3/2- first-forbidden
+52,131,5.2,beta-,100,ENSDF,3/2+ to 3/2- first-forbidden
+52,132,4.6,beta-,100,ENSDF,0+ to 1+ allowed
+52,133,5.4,beta-,100,ENSDF,3/2+ to 3/2- first-forbidden
+52,134,5.1,beta-,100,ENSDF,0+ to 1+ allowed
+54,137,5.5,beta-,67,ENSDF,7/2- to 7/2- first-forbidden
+54,138,5.4,beta-,100,ENSDF,0+ to 1+ allowed
+54,139,5.4,beta-,100,ENSDF,7/2- to 7/2- first-forbidden
+54,140,5.3,beta-,100,ENSDF,0+ to 1+ allowed
+54,141,5.2,beta-,100,ENSDF,7/2- to 7/2- first-forbidden
+54,142,5.1,beta-,100,ENSDF,0+ to 1+ allowed
+38,89,9.37,B-,100.0,ENSDF_2024,Frozen_Test_GS
+38,90,9.30,B-,100.0,ENSDF_2024,Frozen_Test_GS
+38,91,6.10,B-,57.4,ENSDF_2024,Frozen_Test_Excited_556keV
+38,92,4.40,B-,90.0,ENSDF_2024,Frozen_Test_Excited_1384keV
+38,94,4.50,B-,85.0,ENSDF_2024,Frozen_Test_Excited_1428keV
