@@ -4,7 +4,7 @@
 **Affiliation:** Dual-Frame Research Group  
 **License:** MIT  
 **Repository:** `arwells-research/satz-lifetime-diagnostics`  
-**Status:** Phase I Complete (Law Identification & Frozen Validation)
+**Status:** Phase I Complete (Frozen Law) · Phase II Scope Frozen (Structural Residual Mapping)
 
 ---
 
@@ -89,12 +89,42 @@ Phase I acceptance target:
 - median |residual| \(\le 0.35\) dex
 - at most 1 outlier above 0.8 dex (stack sizes are small)
 
-### Phase II — Structural Modulator Mapping (Planned)
+### Phase II — Structural Residual Mapping (Frozen Scope)
 
 **Objective:**  
-Apply the frozen Phase I law to the full dataset to identify *where* nuclear structure suppresses devay relative to the global clock.
+Phase II maps **systematic, structure-dependent deviations** from the frozen Phase I lifetime law.  
+It does **not** attempt to improve numerical lifetime predictions.
 
-Phase II introduces **no refitting of global coefficients**.
+Instead, Phase II answers:
+
+> *When and why should the universal hazard law be expected to over- or under-predict a lifetime?*
+
+**Key principles:**
+- The Phase I law remains **unchanged**
+- Residuals are treated as **diagnostics**, not errors
+- Structure affects **access to the clock**, not the clock itself
+
+**Primary structural axis (frozen):**
+- **Parity class**
+  - even–even
+  - odd-A
+  - odd–odd
+
+**What Phase II does:**
+- Maps residuals relative to the frozen law
+- Demonstrates that parity-dependent suppression persists after conditioning on:
+  - phase space (\(G\))
+  - transition class (`log ft`)
+- Produces **interpretability**, not correction factors
+
+**Explicitly out of scope for Phase II:**
+- Any refitting of \(\alpha\), \(\delta\), or \(G\)
+- Structure-dependent lifetime corrections
+- Regression or smoothing of residuals
+- EC / β⁺ analysis (requires additional data)
+- Shell-model or microscopic mechanism claims
+
+Phase II establishes **where the universal law is structurally blocked**, not how to modify it.
 
 ---
 
@@ -198,7 +228,11 @@ Generated locally (not committed):
 ### Training / Internal Validation
 - Z-stacks: Ca, Ni, Cu, Zn, Rb, Cd, Sn, Te, Xe
 - Median |residual| ≈ **0.31–0.34 dex**
-- No residual trend with G after log ft inclusion
+- Residual–\(G\) trends can still appear in small or biased slices (e.g. a single Z-stack
+  or limited vertical-stack selections), even with frozen \(\log ft\) and \(G\) included.
+  Phase II therefore evaluates structural signals using **conditioning** (e.g. parity
+  separation within \(\log_{10}G\) bins and within `logft` bins), rather than requiring a
+  globally flat residual–\(G\) relationship.
 
 ### Blind Tests (Frozen Coefficients)
 
@@ -224,7 +258,8 @@ Observed large residuals fall into *distinct physical classes*:
 - **Low-Z regime:** Z < 20 (e.g. K-44)
 - **Odd-A hindrance:** configuration-specific slowdowns
 
-These effects motivate **Phase II**, but do not modify the Phase I law.
+These effects motivate **Phase II**, whose purpose is to *map and classify* such deviations
+without modifying or refitting the Phase I law.
 
 ---
 
@@ -269,4 +304,6 @@ This repository is intentionally limited to:
 - frozen-coefficient validation
 - channel-aware diagnostics
 
-Structure-specific modeling belongs to **Phase II and beyond**, layered on top of this verified base.
+Structure-specific effects are handled in **Phase II as residual classification only**.
+Any attempt to produce adjusted or conditioned lifetime predictions would constitute a
+separate, future phase and is **explicitly out of scope here**.

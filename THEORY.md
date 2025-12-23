@@ -42,9 +42,8 @@ The neutron-excess index `G_satz = N − Z` is named after its use in
 Satz’s work *Theory of Subatomic and Atomic Masses and Half-Lives*,
 which explored systematic regularities in nuclear half-lives.
 
-In the present repository, `G_satz` is retained **only** as a structural
-diagnostic variable. It does not appear in the frozen Phase I hazard law,
-and is used solely for residual analysis in Phase II.
+In this repository, `G_satz` is retained solely as a *descriptive structural label*.
+It is never used as a predictor, fit variable, or correction term.
 
 ---
 
@@ -73,6 +72,14 @@ Frozen coefficients are stored at:
 - residuals encode **structural modulators**
   (shell closures, deformation, configuration effects, branch mismatch)
 
+Note: residual–\(G\) correlation can still appear in small or biased subsets
+(e.g. a single Z-stack or a narrow vertical-stack slice), even under the frozen
+Phase I law. For Phase II, structural effects are therefore assessed using
+**conditioning** (e.g. parity separation within \(\log_{10}G\) bins and within `logft` bins),
+not by requiring globally trend-free residuals.
+
+Residuals are diagnostics of structure, not failures of the frozen hazard law.
+
 ---
 
 ## Data Schema
@@ -96,19 +103,49 @@ Columns:
 
 ---
 
-## Phase II (Planned) — Mapping Structural Modulators
+## Phase II — Structural Residual Mapping (Frozen Scope)
 
-Phase II applies the frozen Phase I law across the full dataset to map:
+Phase II applies the frozen Phase I law to compute diagnostic residuals:
 
 \[
-\Delta \equiv \log_{10}\tau_{\text{obs}} - \log_{10}\tau_{\text{pred}}
+\Delta_{\text{struct}} \equiv
+\log_{10}\tau_{\text{obs}} - \log_{10}\tau_{\text{Phase I}}
 \]
 
-Large coherent regions in \(\Delta\) define “Islands of Structure”:
-- shell closures (e.g. near \(N=82\))
-- odd-even effects
-- deformation regions
-- channel-mismatch artifacts (where dominant branch does not match assumed \(Q\))
+The purpose of Phase II is **not** to improve numerical lifetime predictions.
+Its purpose is to identify **systematic, structure-dependent suppression**
+relative to the universal hazard law.
 
-Phase II **does not refit** the hazard law.
-All structure is inferred from residuals against the frozen Phase I baseline.
+### Interpretation of Phase II residuals
+
+- \(\Delta_{\text{struct}} > 0\): structure *blocks or delays* access to the decay clock  
+- \(\Delta_{\text{struct}} < 0\): structure *enhances or unblocks* decay pathways  
+- \(\Delta_{\text{struct}} \approx 0\): decay proceeds at the universal rate
+
+Residual coherence indicates **structural classes**, not correction terms.
+
+### Frozen Phase II scope
+
+- Decay mode: **β⁻ only** (EC / β⁺ require additional data)
+- Primary structural axis: **parity class**
+  - even–even
+  - odd-A
+  - odd–odd
+- Conditioning variables:
+  - phase space (\(G\))
+  - transition class (`log ft`)
+
+Phase II demonstrates that parity-dependent suppression persists
+even when phase space and forbiddenness are held fixed.
+
+### Explicit exclusions
+
+Phase II does **not**:
+- refit \(\alpha\), \(\delta\), or \(G\)
+- introduce structure-dependent correction factors
+- perform regressions on \(Z\), \(N\), or \(N-Z\)
+- claim microscopic mechanisms
+- produce adjusted lifetime predictions
+
+Any attempt to condition or correct lifetimes numerically would constitute
+a **separate future phase**, not an extension of Phase II.
